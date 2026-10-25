@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Card</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="scene">
+
+    <div class="side-controls">
+      <button class="side-btn" id="addBtn" title="Add new call">+</button>
+      <button class="side-btn" id="upBtn" title="Previous">
+        <span class="arrow arrow-up"></span>
+      </button>
+      <button class="side-btn" id="downBtn" title="Next">
+        <span class="arrow arrow-down"></span>
+      </button>
+    </div>
+
+    <div class="card-stack">
+      <div class="card card-back-2"></div>
+      <div class="card card-back-1"></div>
+
+      <div class="card card-front" id="contactCard">
+        <div class="avatar">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=faces" alt="Profile photo">
+        </div>
+        <h1 class="name" id="cName">Fatima Uma</h1>
+        <div class="info-row">
+          <span class="label">Home town</span>
+          <span class="value" id="cHome">Singapore</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Bookings</span>
+          <span class="value" id="cBookings">3 times</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-call">&#128222; Call</button>
+          <button class="btn btn-message">Message</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="swatches">
+      <div class="swatch black active" data-color="var(--black)"></div>
+      <div class="swatch purple" data-color="var(--purple)"></div>
+      <div class="swatch orange" data-color="var(--orange)"></div>
+      <div class="swatch teal" data-color="var(--teal)"></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h2>New Call</h2>
+
+      <div class="field">
+        <label for="imgUrl">Image URL</label>
+        <input type="text" id="imgUrl" placeholder="https://example.com/photo.jpg">
+      </div>
+
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter full name">
+      </div>
+
+      <div class="field">
+        <label for="homeTown">Home Town</label>
+        <input type="text" id="homeTown" placeholder="Enter home town">
+      </div>
+
+      <div class="field">
+        <label for="purpose">Purpose</label>
+        <input type="text" id="purpose" placeholder="e.g., Quick appointment note">
+      </div>
+
+      <div class="field" style="margin-bottom:8px;">
+        <label>Category</label>
+      </div>
+      <div class="category-group">
+        <label class="cat-chip emergency">
+          <input type="checkbox" name="category" value="Emergency"> Emergency
+        </label>
+        <label class="cat-chip important">
+          <input type="checkbox" name="category" value="Important"> Important
+        </label>
+        <label class="cat-chip urgent">
+          <input type="checkbox" name="category" value="Urgent"> Urgent
+        </label>
+        <label class="cat-chip norush">
+          <input type="checkbox" name="category" value="No Rush"> No Rush
+        </label>
+      </div>
+
+      <button class="modal-btn btn-create" id="createBtn">Create Note</button>
+      <button class="modal-btn btn-close" id="closeBtn">Close</button>
+    </div>
+  </div>
+
+</body>
+</html>
