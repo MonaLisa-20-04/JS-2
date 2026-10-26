@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#0f0f0f] text-neutral-200 flex flex-col items-center gap-10 px-4 py-8">
+
+  <!-- Add User form -->
+  <form autocomplete="off" class=" w-full max-w-[480px] bg-[#262626] border border-neutral-600 rounded-2xl p-7 shadow-lg">
+    <h1 class="text-center text-3xl font-bold text-neutral-200 mb-6">Add User</h1>
+
+    <div class="mb-5">
+      <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+      <input id="name" type="text"
+        class="w-full h-10 rounded-lg bg-[#333] border border-neutral-700 px-3 text-neutral-100 outline-none focus:border-neutral-400" />
+    </div>
+
+    <div class="mb-5">
+      <label for="role" class="block text-sm font-semibold mb-2">Role</label>
+      <input id="role" type="text"
+        class="w-full h-10 rounded-lg bg-[#333] border border-neutral-700 px-3 text-neutral-100 outline-none focus:border-neutral-400" />
+    </div>
+
+    <div class="mb-5">
+      <label for="bio" class="block text-sm font-semibold mb-2">Bio</label>
+      <textarea id="bio"
+        class="w-full h-24 rounded-lg bg-[#333] border border-neutral-700 px-3 py-2 text-neutral-100 outline-none focus:border-neutral-400 resize-y"></textarea>
+    </div>
+
+    <div class="mb-6">
+      <label for="photo" class="block text-sm font-semibold mb-2">Photo URL</label>
+      <input id="photo" type="text"
+        class="w-full h-10 rounded-lg bg-[#333] border border-neutral-700 px-3 text-neutral-100 outline-none focus:border-neutral-400" />
+    </div>
+
+    <button type="submit"
+      class="w-full h-12 rounded-lg border border-neutral-700 bg-transparent text-sm font-semibold text-neutral-200 hover:bg-neutral-800 transition">
+      Submit
+    </button>
+  </form>
+
+  <!-- User cards -->
+  <section class="users flex flex-wrap justify-center items-start gap-8 w-full max-w-5xl">
+
+    <!-- Card 1
+    <article class="w-80 bg-[#262626] border border-neutral-700 rounded-xl px-6 py-7 text-center shadow-md transition-transform hover:scale-105">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe"
+        class="w-[104px] h-[104px] rounded-full object-cover mx-auto mb-4 border-4 border-neutral-600" />
+      <h2 class="text-2xl font-bold text-neutral-200">John Doe</h2>
+      <p class="text-sm font-medium text-neutral-200 mt-1">Frontend Developer</p>
+      <p class="text-sm text-neutral-300 mt-3 leading-snug">Loves building beautiful UIs and learning new technologies.</p>
+    </article>
+
+    Card 2
+    <article class="w-80 bg-[#262626] border border-neutral-700 rounded-xl px-6 py-7 text-center shadow-md transition-transform hover:scale-105">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith"
+        class="w-[104px] h-[104px] rounded-full object-cover mx-auto mb-4 border-4 border-neutral-600" />
+      <h2 class="text-2xl font-bold text-neutral-200">Jane Smith</h2>
+      <p class="text-sm font-medium text-neutral-200 mt-1">Backend Engineer</p>
+      <p class="text-sm text-neutral-300 mt-3 leading-snug">Enjoys solving complex problems and optimizing APIs.</p>
+    </article>
+
+    Card 3 (shown slightly enlarged, as in the hovered state)
+    <article class="w-80 bg-[#262626] border border-neutral-700 rounded-xl px-6 py-7 text-center shadow-md transition-transform hover:scale-105">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alex Lee"
+        class="w-[104px] h-[104px] rounded-full object-cover mx-auto mb-4 border-4 border-neutral-600" />
+      <h2 class="text-2xl font-bold text-neutral-200">Alex Lee</h2>
+      <p class="text-sm font-medium text-neutral-200 mt-1">UI/UX Designer</p>
+      <p class="text-sm text-neutral-300 mt-3 leading-snug">Passionate about making beautiful UI/UX designs.</p>
+    </article> -->
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
